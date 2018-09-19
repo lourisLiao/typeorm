@@ -8,7 +8,8 @@ import {CordovaConnectionOptions} from "../driver/cordova/CordovaConnectionOptio
 import {SqljsConnectionOptions} from "../driver/sqljs/SqljsConnectionOptions";
 import {ReactNativeConnectionOptions} from "../driver/react-native/ReactNativeConnectionOptions";
 import {NativescriptConnectionOptions} from "../driver/nativescript/NativescriptConnectionOptions";
-import {ExpoConnectionOptions} from "../driver/expo/ExpoConnectionOptions";
+import {ExpoConnectionOptions} from "../driver/expo/ExpoConnectionOptions"
+import {TestConnectionOptions} from "../driver/test/TestConnectionOptions";
 
 /**
  * ConnectionOptions is an interface with settings and options for specific connection.
@@ -16,6 +17,7 @@ import {ExpoConnectionOptions} from "../driver/expo/ExpoConnectionOptions";
  * Consumer must provide connection options for each of your connections.
  */
 export type ConnectionOptions =
+    TestConnectionOptions |
     MysqlConnectionOptions|
     PostgresConnectionOptions|
     SqliteConnectionOptions|
