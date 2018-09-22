@@ -12,7 +12,6 @@ import {PostgresDriver} from "./postgres/PostgresDriver";
 import {ExpoDriver} from "./expo/ExpoDriver";
 import {Driver} from "./Driver";
 import {Connection} from "../connection/Connection";
-import {TestDriver} from "./test/TestDriver";
 
 /**
  * Helps to create drivers.
@@ -25,8 +24,6 @@ export class DriverFactory {
     create(connection: Connection): Driver {
         const type = connection.options.type;
         switch (type) {
-            case "test":
-                return new TestDriver(connection);
             case "mysql":
                 return new MysqlDriver(connection);
             case "postgres":

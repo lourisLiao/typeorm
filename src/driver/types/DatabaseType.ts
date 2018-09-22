@@ -2,7 +2,6 @@
  * Database type.
  */
 export type DatabaseType =
-    "test" |
     "mysql"|
     "postgres"|
     "mariadb"|
